@@ -4,12 +4,15 @@ use app\controllers\HomeController;
 use app\controllers\DatosController;
 use lib\Route;
 
-//Route::get("/", [HomeController::class,"index"]);
-
+// Home
 Route::get("/Home", [HomeController::class,"index"]);
+
+// CRUD estudiantes
 Route::get("/Datos", [DatosController::class,"index"]);
+Route::post("/Datos", [DatosController::class,"index"]); // <-- permitir POST
+// Eliminar estudiante
+Route::get("/Datos/delete/:id", [DatosController::class, "delete"]);
 
-//Route::post("/Contactar", [HomeController::class,"index"]);
 
+// Ejecutar el router
 Route::dispatch();
-?>
