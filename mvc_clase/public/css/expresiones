@@ -1,0 +1,18 @@
+$email = "correo@ejemplo.com";
+if (preg_match("/^[\w.-]+@[\w.-]+\.[a-z]{2,}$/i", $email)) {
+    echo "Email válido";
+} else {
+    echo "Email inválido";
+}
+
+$str = "El precio es 120 dólares";
+preg_match_all("/\d+/", $str, $matches);
+print_r($matches[0]); // [120]
+
+$texto = "Hola mundo cruel";
+echo preg_replace("/cruel/", "bonito", $texto);
+// Hola mundo bonito
+
+$cadena = "uno, dos  tres";
+$partes = preg_split("/[\s,]+/", $cadena);
+print_r($partes); // [uno, dos, tres]
