@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $title ?? 'Home' ?></title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        form { margin-bottom: 20px; }
-        input { margin-right: 10px; padding: 5px; }
-        button { padding: 5px 10px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 5px; }
-        a { margin-left: 10px; text-decoration: none; color: blue; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="/mvc_clase/public/css/general.css">
 </head>
 <body>
     <h1><?= $title ?></h1>
